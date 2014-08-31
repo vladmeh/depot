@@ -6,10 +6,10 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body{:class => controller.controller_name}
-    #banner
+    .container#banner
       = image_tag('logo.png')
       = @page_title || "Pragmatic Bookshelf"
-    #columns
+    .container#columns
       #side
         %ul
           %li= link_to 'Home', '/'
