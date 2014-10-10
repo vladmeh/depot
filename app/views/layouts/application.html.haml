@@ -18,3 +18,4 @@
           %li= link_to 'Contact', '#'
       #main
         = yield
+        /= pluralize(@count, 'page load') if @count
