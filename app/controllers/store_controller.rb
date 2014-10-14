@@ -10,7 +10,7 @@ class StoreController < ApplicationController
   # end
 
   def index
-    # @count = increment_counter
     @products = Product.order(:title)
+    @cart = current_cart
   end
 end
