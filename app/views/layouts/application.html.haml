@@ -16,8 +16,7 @@
           %li= link_to 'Questions', '#'
           %li= link_to 'News', '#'
           %li= link_to 'Contact', '#'
-        #cart
+        = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
           = render @cart
       #main
         = yield
-        /= pluralize(@count, 'page load') if @count
