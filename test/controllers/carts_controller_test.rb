@@ -35,7 +35,7 @@ class CartsControllerTest < ActionController::TestCase
   end
 
   test "should update cart" do
-    put :update, id: @cart.to_param, cart: @cart.attributes
+    patch :update, id: @cart, cart: {  }
     assert_redirected_to cart_path(assigns(:cart))
   end
 
